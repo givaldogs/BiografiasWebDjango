@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Biografias{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Lista de biografias</h1>
+    <p class="lead">Abaixo você encontrará as biografias das grandes personalidades mundiais.</p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr class="alert-primary">
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Data Criação</th>
+            <th>Data Modificação</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for pessoa in pessoas %}
+        <tr>
+            <td>{{pessoa.id}}</td>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.data_criacao}}</td>
+            <td>{{pessoa.data_modificacao}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

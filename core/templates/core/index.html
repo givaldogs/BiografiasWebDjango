@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Biografias Web</h1>
+    <p class="lead">Encontre a biografia das maiores personalidades do mundo.</p>
+    <hr class="my-4">
+    <p>Use o botao abaixo para acessar lista de biografias.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'lista' %}" role="button">Ir para a lista de biografias</a>
+</div>
+{%endblock %}
