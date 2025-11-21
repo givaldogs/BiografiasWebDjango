@@ -15,6 +15,7 @@
             <th>Nome</th>
             <th>Data Criação</th>
             <th>Data Modificação</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -25,6 +26,9 @@
             <td>{{pessoa.nome}}</td>
             <td>{{pessoa.data_criacao}}</td>
             <td>{{pessoa.data_modificacao}}</td>
+            <td>
+                <a class="btn btn-info" href="{% url 'detalhe' pessoa.id %}">Ler a biografia</a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>

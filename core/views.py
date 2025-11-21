@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Q 
+from django.shortcuts import get_object_or_404
 from . models import Pessoa
 
 # Create your views here.
@@ -20,3 +21,11 @@ def lista(request):
         'pessoas': pessoas
     }
     return render(request, 'core/lista.html', context=context)
+
+
+def detalhe(request, id):
+    pessoa = get_object_or_404(Pessoa, pk=id)
+    context = {
+        'pessoa': pessoa
+    }
+    return render(request,'core/detalhe.html', context=context)
